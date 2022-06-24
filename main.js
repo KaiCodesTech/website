@@ -1,5 +1,9 @@
-import * as THREE from './node_modules/three/build/three.module.js'
-import { OrbitControls } from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+import '/style.css'
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import moonurl from '/public/assets/moon.jpg'
+import pfpurl from '/public/assets/pfp.jpg'
+import spaceurl from '/public/assets/space.jpg'
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -23,10 +27,6 @@ pointLight.position.set(20, 20, 20);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-const lightHelper = new THREE.PointLightHelper(pointLight);
-const gridHelper = new THREE.GridHelper(200, 50)
-scene.add(lightHelper, gridHelper)
-
 const controls = new OrbitControls(camera, renderer.domElement);
 
 function addStar() {
@@ -41,17 +41,17 @@ function addStar() {
 }
 Array(200).fill().forEach(addStar)
 
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load(spaceurl);
 scene.background = spaceTexture;
 
-const pfpTexture = new THREE.TextureLoader().load('pfp.jpg');
+const pfpTexture = new THREE.TextureLoader().load(pfpurl);
 const pfp = new THREE.Mesh(
   new THREE.BoxGeometry(3,3,3),
   new THREE.MeshBasicMaterial({map: pfpTexture})
 )
 scene.add(pfp)
 
-const moonTexture = new THREE.TextureLoader().load('moon.jpg')
+const moonTexture = new THREE.TextureLoader().load(moonurl)
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({map: moonTexture})
