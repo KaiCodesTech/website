@@ -1,3 +1,5 @@
-export default {
-    base: 'kaicodes.tech'
-}
+import { defineConfig } from "vite"
+
+export default defineConfig({
+    base: "/"
+})
