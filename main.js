@@ -1,5 +1,5 @@
 // Initialize the FirebaseUI Widget using Firebase.
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
+// var ui = new firebaseui.auth.AuthUI(firebase.auth());
 
 function openNav() {
     document.getElementById("sideNav").style.width = "250px";
@@ -9,13 +9,13 @@ function closeNav() {
     document.getElementById("sideNav").style.width = "0";
 }
 
-ui.start('#firebaseui-auth-container', {
-    signInOptions: [
-        firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID
-    ],
-    // Other config options...
-});
+// ui.start('#firebaseui-auth-container', {
+//     signInOptions: [
+//         firebase.auth.EmailAuthProvider.PROVIDER_ID,
+//         firebase.auth.GoogleAuthProvider.PROVIDER_ID
+//     ],
+//     Other config options...
+// });
 
 // const sideNav = document.getElementsByClassName("sideNav")
 //
