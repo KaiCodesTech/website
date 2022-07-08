@@ -1,17 +1,15 @@
 {
-  "name": "my-first-project",
-  "private": true,
-  "version": "0.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "config": "vite --config vite.config.js"
-  },
-  "devDependencies": {
-    "vite": "^2.9.9"
-  },
   "dependencies": {
-    "three": "^0.140.2"
-  }
+    "jquery": "^3.6.0",
+    "sass": "^1.48.0"
+  },
+  "name": "my-portfolio",
+  "version": "0.5.0",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass style.scss style.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
