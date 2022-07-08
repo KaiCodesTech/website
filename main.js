@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 // import './style.css'
 // 
 // const app = document.querySelector<HTMLDivElement>('#app')!
@@ -12,6 +13,10 @@ import { OrbitControls } from "./node_modules/three/examples/jsm/controls/OrbitC
 import moonurl from '/public/assets/moon.jpg'
 import pfpurl from '/public/assets/pfp.jpg'
 import spaceurl from '/public/assets/space.jpg'
+=======
+// Initialize the FirebaseUI Widget using Firebase.
+//var ui = new firebaseui.auth.AuthUI(firebase.auth());
+>>>>>>> Stashed changes
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -51,6 +56,7 @@ function addStar() {
 }
 Array(200).fill(undefined).forEach(addStar)
 
+<<<<<<< Updated upstream
 const spaceTexture = new THREE.TextureLoader().load(spaceurl);
 scene.background = spaceTexture;
 
@@ -75,6 +81,15 @@ function moveCamera() {
   moon.rotation.x += 0.05;
   moon.rotation.y += 0.075;
   moon.rotation.z += 0.05;
+=======
+//ui.start('#firebaseui-auth-container', {
+//    signInOptions: [
+//        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+//        firebase.auth.GoogleAuthProvider.PROVIDER_ID
+//    ],
+//    Other config options...
+//});
+>>>>>>> Stashed changes
 
   pfp.rotation.y += 0.01;
   pfp.rotation.z += 0.01;
