@@ -3,147 +3,334 @@
   padding: 0;
 }
 
-body .main .parallax_wrapper {
-  height: 100vh;
+html {
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
-  -webkit-perspective: 300px;
-          perspective: 300px;
-  /*#outro {}*/
-  /* Contact Me */
 }
 
-body .main .parallax_wrapper .intro_screen {
+button {
+  align-items: center;
+}
+
+h1,
+p {
+  margin: auto;
+  padding: 20px;
+}
+
+.stackedSteps1 {
+  background-image: url("/assets/transitions/stacked-steps-haikei.svg");
+  background-repeat: no-repeat;
+}
+
+.stackedSteps2 {
+  background-image: url("/assets/transitions/stacked-steps-haikei (1).svg");
+  background-repeat: no-repeat;
+}
+
+.aboutBtn {
+  visibility: hidden;
+}
+
+.top {
   height: 100vh;
-  background-color: blueviolet;
-  display: -webkit-box;
-  display: -ms-flexbox;
+}
+
+/* From uiverse.io by @mrhyddenn */
+.mouse-btn {
+  margin: 10px auto;
+  width: 40px;
+  height: 80px;
+  border: 3px solid rgba(122, 122, 124, 0.918);
+  border-radius: 20px;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-@media screen and (max-height: 450px) {
-  body .main .parallax_wrapper .intro_screen {
-    font-size: 50px;
+.mouse-scroll {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(170deg, rgba(122, 122, 124, 0.918), rgb(123, 124, 124));
+  border-radius: 50%;
+  margin: auto;
+  -webkit-animation: scrolling13 1s linear infinite;
+          animation: scrolling13 1s linear infinite;
+}
+
+.scrollText {
+  text-align: center;
+}
+
+@-webkit-keyframes scrolling13 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
   }
 }
 
-@media screen and (min-height: 451px) {
-  body .main .parallax_wrapper .intro_screen {
-    font-size: 35px;
+@keyframes scrolling13 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
   }
 }
-
-body .main .parallax_wrapper .outro_screen {
-  height: 100vh;
-  background-color: deepskyblue;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-@media screen and (max-height: 450px) {
-  body .main .parallax_wrapper .outro_screen {
-    font-size: 50px;
-  }
-}
-
-@media screen and (min-height: 451px) {
-  body .main .parallax_wrapper .outro_screen {
-    font-size: 35px;
-  }
-}
-
-body .main .parallax_wrapper .parallax_group {
+/* From uiverse.io by @ShadowShahriar */
+button {
+  --border-radius: 15px;
+  --border-width: 4px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   position: relative;
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  padding: 1em 2em;
+  border: 0;
+  background-color: #212121;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 2;
 }
 
-body .main .parallax_wrapper .parallax_group .parallax_layer {
+button::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
   position: absolute;
-  inset: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(#488cfb, #29dbbc, #ddf505, #ff9f0e, #e440bb, #655adc, #488cfb);
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  -webkit-animation: rotate-hue linear 500ms infinite;
+          animation: rotate-hue linear 500ms infinite;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
-@media screen and (max-height: 450px) {
-  body .main .parallax_wrapper .parallax_group .parallax_layer {
-    font-size: 50px;
+button:hover::after {
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+}
+
+@-webkit-keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
   }
 }
 
-@media screen and (min-height: 451px) {
-  body .main .parallax_wrapper .parallax_group .parallax_layer {
-    font-size: 35px;
+@keyframes rotate-hue {
+  to {
+    filter: hue-rotate(1turn);
   }
 }
-
-body .main .parallax_wrapper .parallax_group .base_layer {
-  -webkit-transform: translateZ(-300px) scale(2);
-          transform: translateZ(-300px) scale(2);
+button,
+button::after {
+  box-sizing: border-box;
 }
 
-body .main .parallax_wrapper .parallax_group .mid_layer {
-  -webkit-transform: translateZ(0px);
-          transform: translateZ(0px);
+button:active {
+  --border-width: 5px;
 }
 
-body .main .parallax_wrapper .parallax_group .top_layer {
-  -webkit-transform: translateZ(210px) scale(0.3);
-          transform: translateZ(210px) scale(0.3);
+.blue {
+  background-color: blue;
+  color: white;
 }
 
-body .main .parallax_wrapper #intro {
-  z-index: 0;
+.green {
+  background-color: rgb(33, 233, 33);
 }
 
-body .main .parallax_wrapper #group-1 {
-  z-index: -1;
+.red {
+  background-color: red;
 }
 
-body .main .parallax_wrapper #group-1 > .base_layer {
-  background-color: cyan;
+.black {
+  background-color: #212121;
+  color: white;
 }
 
-body .main .parallax_wrapper #group-2 > .base_layer {
-  background-color: forestgreen;
-  z-index: -1;
-}
-
-body .main .parallax_wrapper #group-2 > .mid_layer {
-  z-index: 0;
-  background-color: forestgreen;
-}
-
-body .main .parallax_wrapper .contact_me {
+.trans1 {
   position: relative;
-  background-color: chartreuse;
-  font-size: 10px;
-  height: 30vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
 }
 
-body .main .parallax_wrapper .contact_me a {
-  position: absolute;
-  bottom: 45%;
+.trans1 svg {
+  position: relative;
+  width: calc(100% + 1.3px);
+  height: 223px;
 }
-/*# sourceMappingURL=style.css.map */
+
+.trans1 .shape-fill {
+  fill: #212121;
+}
+
+.trans2 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.trans2 svg {
+  position: relative;
+  width: calc(100% + 1.3px);
+  height: 175px;
+}
+
+.trans2 .shape-fill {
+  fill: #212121;
+}
+
+.trans3 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.trans3 svg {
+  position: relative;
+  display: block;
+  width: calc(168% + 1.3px);
+  height: 175px;
+  transform: rotateY(180deg);
+}
+
+.trans3 .shape-fill {
+  fill: #21E921;
+}
+
+/* Center Tags */
+.centerflex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centermargin {
+  margin: auto;
+}
+
+.centerinlinediv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -5px;
+}
+
+.centerinline {
+  margin: 0 5px;
+}
+
+@media (max-width: 845px) {
+  .centerinlinediv {
+    display: block;
+  }
+
+  .card .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+  }
+
+  .smallcenterinlinediv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+  }
+}
+/* Card Styles */
+/* From uiverse.io by @alexruix */
+.card {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  width: 190px;
+  height: 254px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+.card::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+.card-info {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+}
+
+.card .cardTitle {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/*Hover*/
+.card:hover::after {
+  opacity: 0;
+}
+
+.card:hover .card-info {
+  color: #f7ba2b;
+  transition: color 1s;
+}
+
+.heading {
+  font-family: "Roboto", sans-serif;
+  font-size: 100px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

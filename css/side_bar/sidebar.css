@@ -1,19 +1,79 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   /* background-color: rgb(14, 218, 218); */
+}
+
+.openNav {
+  position: fixed;
+}
+
+/* From uiverse.io by @Ali-Tahmazi99 */
+input[type=checkbox] {
+  -webkit-appearance: none;
+  display: none;
+  visibility: hidden;
+}
+
+.bar {
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 40px;
+  left: 1%;
+  top: 1%;
+}
+
+.bar span {
+  position: absolute;
+  width: 35px;
+  height: 5px;
+  background: #f1faee;
+  border-radius: 100px;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.bar span.top {
+  top: 15px;
+}
+
+.bar span.middle {
+  top: 30px;
+}
+
+.bar span.bottom {
+  top: 45px;
+}
+
+input[type]:checked ~ span.top {
+  transform: rotate(45deg);
+  transform-origin: top left;
+  width: 48px;
+  left: 5px;
+}
+
+input[type]:checked ~ span.bottom {
+  transform: rotate(-45deg);
+  transform-origin: top left;
+  width: 48px;
+  bottom: -1px;
+  box-shadow: 0 0 10px #495057;
+}
+
+input[type]:checked ~ span.middle {
+  transform: translateX(-20px);
+  opacity: 0;
 }
 
 .sideNav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 2;
   top: 0;
   left: 0;
-  background-color: #0e8282;
+  background-color: rgb(14, 130, 130);
   overflow-x: hidden;
   padding-top: 60px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -23,12 +83,11 @@ html {
   font-size: 25px;
   color: #FFFFFF;
   display: block;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .sideNav a:hover {
-  color: #0ebebe;
+  color: rgb(14, 190, 190);
 }
 
 .sideNav .navbarCloseBtn {
@@ -39,18 +98,12 @@ html {
   margin-left: 50px;
 }
 
-.openNav {
-  position: fixed;
-  left: 15px;
-  z-index: 1;
-}
-
 @media screen and (max-height: 450px) {
   .sideNav {
     padding-top: 15px;
   }
+
   .sideNav a {
     font-size: 18px;
   }
-}
-/*# sourceMappingURL=sidebar.css.map */
+}/*# sourceMappingURL=sidebar.css.map */
