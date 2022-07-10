@@ -5,6 +5,7 @@ html {
 
 .openNav {
   position: fixed;
+  z-index: 9;
 }
 
 /* From uiverse.io by @Ali-Tahmazi99 */
@@ -69,9 +70,10 @@ input[type]:checked~span.middle {
   height: 100%;
   width: 0;
   position: fixed;
+  z-index: 8;
   top: 0;
   left: 0;
-  background-color: rgb(14, 130, 130);
+  background-color: red;
   overflow-x: hidden;
   padding-top: 60px;
   transition: 0.5s;
@@ -87,11 +89,11 @@ input[type]:checked~span.middle {
 }
 
 .sideNav a:hover {
-  color: rgb(14, 190, 190);
+  color: rgb(255, 134, 134);
 }
 
 .sideNav .navbarCloseBtn {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 25px;
   font-size: 30px;
