@@ -334,3 +334,9 @@ button:active {
   font-size: 100px;
   text-align: center;
 }/*# sourceMappingURL=style.css.map */
+
+.disclaimer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
